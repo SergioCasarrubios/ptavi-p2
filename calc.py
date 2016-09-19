@@ -20,10 +20,10 @@ def mult(op1, op2):
 def divide(op1, op2):
     """ Function to divide the operands """
     try:
-        op1 / op2 
-    except ZeroDivisionError
+        return op1 / op2 
+    except ZeroDivisionError:
         sys.exit("Error: Zero divisor")
-    return    
+   
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
