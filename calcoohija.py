@@ -2,16 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import calcoo
 
-class Calculadora():
-    
-    def suma(self, op1, op2):
-        return op1 + op2 
-    
-    def resta(self, op1, op2):
-        return op1 - op2
-        
-class CalculadoraHija(Calculadora):
+class CalculadoraHija(calcoo.Calculadora):
     def mult(self, op1, op2):
         return op1 * op2
     
@@ -40,4 +33,5 @@ if __name__ == "__main__":
         result = calculadora.divide(operando1, operando2)
     else:
         sys.exit('Operación no definida.')
+        
     print(result)
