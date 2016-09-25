@@ -12,18 +12,20 @@ def plus(op1, op2):
 def minus(op1, op2):
     """ Function to substract the operands """
     return op1 - op2
-    
+
+
 def mult(op1, op2):
     """ Function to multiply the operands """
     return op1 * op2
-    
+
+
 def divide(op1, op2):
     """ Function to divide the operands """
     try:
-        return op1 / op2 
+        return op1 / op2
     except ZeroDivisionError:
         sys.exit("Error: Zero divisor")
-   
+
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
