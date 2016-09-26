@@ -6,7 +6,7 @@ import calcoohija
 import csv
 
 fichero = csv.reader(open(sys.argv[1]))
-calculadora = calcoohija.CalculadoraHija
+calculadora = calcoohija.CalculadoraHija()
 funciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
              'multiplica': calculadora.mult, 'divide': calculadora.divide}
 
@@ -18,7 +18,7 @@ for row in fichero:
 
     for dato in row:
         try:
-            result = funciones[operacion](0, result, int(dato))
+            result = funciones[operacion](result, int(dato))
         except KeyError:
             sys.exit('Operación no definida.')
     print(result)

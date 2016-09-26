@@ -5,7 +5,7 @@ import sys
 import calcoohija
 
 fichero = open(sys.argv[1], 'r')
-calculadora = calcoohija.CalculadoraHija
+calculadora = calcoohija.CalculadoraHija()
 lineas = fichero.readlines()
 funciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
              'multiplica': calculadora.mult, 'divide': calculadora.divide}
@@ -20,7 +20,7 @@ for linea in lineas:
 
     for dato in datos:
         try:
-            result = funciones[operacion](0, result, int(dato))
+            result = funciones[operacion](result, int(dato))
         except KeyError:
             sys.exit('Operación no definida.')
     print(result)
